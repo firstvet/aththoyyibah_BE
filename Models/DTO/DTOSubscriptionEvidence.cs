@@ -1,0 +1,17 @@
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Ath_Thoyyibah_BE.Models.DTO
+{
+    public class DTOSubscriptionEvidence
+    {
+        [AllowNull]
+        public List<MasterBankAccount>? MasterBankAccounts { get; set; }
+        //public int subscriptionEvidenceId { get; set; }
+        public IFormFile evidenceFile { get; set; }
+        public string email { get; set; }
+        public int subscriptionPeriodId { get; set; }
+        [AllowNull]
+        public string? transferBy { get; set; } = null;
+        public int selectedBankId { get; set; }
+    }
+}
